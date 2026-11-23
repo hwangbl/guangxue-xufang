@@ -1,0 +1,15 @@
+/* Shared interface palette. Optical wavelengths and measured images have separate rules. */
+:root {
+  --lab-page: #FFFFFF;
+  --lab-panel: #F3F6F8;
+  --lab-hover: #EAF3F7;
+  --lab-pressed: #D8EDF5;
+  --lab-text: #10405C;
+  --lab-body: #596974;
+  --lab-description: #596974;
+  --lab-muted: #687C88;
+  --lab-border: #CFD9DE;
+  --lab-divider: #CCCCCC;
+  --lab-ink: #246891;
+  --lab-grid: #E8ECF0;
+}
