@@ -1,0 +1,4 @@
+@import url('../telescope/style.css');
+#eye{aspect-ratio:1;width:100%;height:auto}#curve{width:100%;height:auto;margin-top:20px}#record,#calibrate{width:100%;margin:12px 0}.table-scroll{overflow-x:auto}table{min-width:800px}#intensity{font-size:24px;font-variant-numeric:tabular-nums}
+
+#curve-legend{padding-left:20px;font-size:12px;overflow-wrap:anywhere} #curve-legend li{margin:6px 0}

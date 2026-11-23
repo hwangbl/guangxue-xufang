@@ -1,0 +1,2 @@
+@import url('../telescope/style.css');
+#eye{aspect-ratio:1;max-width:550px;align-self:center}#focus-slider{width:100%}#observation-scale{line-height:1.6}#measurement{min-height:24px}.metrics strong{font-size:17px!important}.observation .nudge{flex-wrap:wrap;width:100%}#record{margin-top:0}#scene{touch-action:none}#observation-note{min-height:65px}

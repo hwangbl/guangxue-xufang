@@ -1,0 +1,6 @@
+/* Instrument framing belongs to these two redesigned laboratories only. */
+.stage{align-self:start}
+#scene{height:clamp(420px,42vw,640px);min-height:0;background:#eef0f2}
+.stagebar button{min-height:32px}
+.product-render-controls{max-width:calc(100% - 20px);box-sizing:border-box}
+@media(max-width:600px){#scene{height:420px}}

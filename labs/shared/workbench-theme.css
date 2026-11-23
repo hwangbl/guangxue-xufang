@@ -1,0 +1,45 @@
+@import url('./palette.css');
+@import url('./mobile-layout.css?v=20261015');
+/* Shared neutral interface for all twelve laboratories. */
+:root{color-scheme:light;--bg:var(--lab-page);--panel:var(--lab-page);--panel2:var(--lab-panel);--line:var(--lab-border);--text:var(--lab-text);--muted:var(--lab-body);--gold:var(--lab-text);--cyan:var(--lab-ink);color:var(--lab-text);background:var(--lab-page)}
+body{background:var(--lab-page);color:var(--lab-text)}
+button,select,input[type=number],textarea{color:var(--lab-text);background:var(--lab-page);border-color:var(--lab-border);border-radius:3px}
+button:hover{background:var(--lab-hover);border-color:var(--lab-muted)}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--lab-ink);outline-offset:2px}
+button.active,.views button.active,button[aria-pressed=true],.mechanics button[aria-pressed=true]{background:var(--lab-hover);color:var(--lab-text);border-color:var(--lab-text)}
+.primary,#record,button[data-record],.record-toolbar #record-left,.record-toolbar #record-right{background:var(--lab-panel);color:var(--lab-text);border-color:var(--lab-text)}
+.primary:hover,#record:hover,button[data-record]:hover{background:var(--lab-hover)}
+button:disabled,button[data-record]:disabled{background:var(--lab-panel);color:var(--lab-muted);border-color:var(--lab-border)}
+input[type=range],input[type=checkbox]{accent-color:var(--lab-text)}
+.viewer,.visual,.instrument,.instrument-panel,.observation-panel,.measurement,.records,.record-card,.result-card,aside,dialog{border-color:var(--lab-border);border-radius:3px;box-shadow:none;background:var(--lab-page);color:var(--lab-text)}
+aside,.adjustment-scroll,.adjustment-heading,.readout,.note,.comparison,.prism-controls,.result-card,#feedback{background:var(--lab-panel);border-color:var(--lab-border)}
+.eyebrow,.tag,.stamp,.stamp strong,.scene-caption strong,.selection p,.note,details,details p,output,.prism-controls strong,.view-state,header p,footer{color:var(--lab-body)}
+details a,a{color:var(--lab-text);text-decoration:underline;text-underline-offset:3px}
+.panel-top,nav,.bar,.scene-bottom,.selection,.part-info,.scan-panel,.readout,th,td{border-color:var(--lab-border)}
+.workflow li,nav>span{background:var(--lab-panel);color:var(--lab-body);border-radius:3px}.workflow li.current,nav>span.active{background:var(--lab-hover);color:var(--lab-text)}
+.reading{background:var(--lab-panel)}.reading output{color:var(--lab-text)}label input[type=range]{accent-color:var(--lab-text)}
+.eyepiece-wrap{background:var(--lab-panel)}.view-meta{color:var(--lab-body)}
+/* Scene backgrounds and optical canvases retain their experiment-specific styling. */
+#loading,#model-loading{background:var(--lab-panel);color:var(--lab-body)}
+#hover-label{background:var(--lab-page);color:var(--lab-text);border-color:var(--lab-border);border-radius:3px;box-shadow:none}
+.measurement canvas{border-radius:3px}
+header{padding:12px 18px;gap:12px}header h1{font-size:20px}.intro h1{font-size:20px}
+html[data-workbench=true] header{padding:10px 14px}
+html[data-workbench=true] header h1{font-size:17px}
+html[data-workbench=true] main{padding-top:10px}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* The parent workbench already names the experiment. Keep only instrument actions. */
+html[data-workbench=true] body>header>div:first-child:not(.header-actions),
+html[data-workbench=true] .intro>div:first-child{display:none}
+html[data-workbench=true] body>header,
+html[data-workbench=true] .intro{display:flex;justify-content:flex-end;gap:8px;padding:5px 10px;margin:0;min-height:36px;border-bottom:0}
+html[data-workbench=true] .header-actions,html[data-workbench=true] .header-right{display:flex;gap:8px}
+html[data-workbench=true] main{padding-top:4px}
+
+button:active{background:var(--lab-pressed)}
+body{font-variant-numeric:tabular-nums}
+
+/* E studio backdrop while the instrument is loading. */
+#scene{background:#353B44}
+.scene-caption,.scene-caption strong{color:#e3eaf2;text-shadow:0 1px 3px #0008}

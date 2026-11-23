@@ -1,0 +1,33 @@
+/* Only the new isolated laboratory uses this layout. */
+:root{color-scheme:light;--bg:#f7f9f8;--panel:#fff;--panel2:#edf3ef;--line:#dfe7e2;--text:#203832;--muted:#62756c;--gold:#285f4e;--cyan:#32725e}
+button,select,input[type=number]{background:#fff}
+button:hover{background:#edf4f0;border-color:#8eafa0}
+button.active,.views button.active{background:#e5f0ea;border-color:#9dbbac;color:#285f4e}
+.primary,.record-toolbar #record-left,.record-toolbar #record-right{background:#285f4e;border-color:#285f4e;color:#fff}
+.primary:hover,.record-toolbar #record-left:hover,.record-toolbar #record-right:hover{background:#184c3c;border-color:#184c3c}
+#scene{background:radial-gradient(ellipse at 50% 35%,#f1f3f1 0,#dce2de 60%,#c9d2cc 100%)}
+.scene-caption strong{color:#62776b}
+#hover-label{background:#fffef7f5;border-color:#9dbbac;color:#203832;box-shadow:0 4px 14px #20383215}
+.eyepiece-wrap{background:radial-gradient(ellipse at center,#24322d,#18241f)}
+.view-meta{color:#d6e2db}.view-meta button{background:#2c3e34;border-color:#617b6c;color:#fff}
+.view-meta button:hover{background:#3a5144}
+.view-state .warn,.table-note.warn{color:#986019}
+th{background:#f0f5f2}th,td{border-bottom-color:var(--line)}
+.result-card{background:linear-gradient(145deg,#fff,#edf5f0)}.formula{color:#526a5d}
+.secondary>details{background:#fff}
+#model-loading{background:#edf2eeed}.loader{border-color:#c1d3c8;border-top-color:var(--cyan)}
+#toast{background:#fff;border-color:#9dbbac;color:#203832;box-shadow:0 6px 24px #20383220}
+dialog{border-color:#bdcfc3}dialog::backdrop{background:#20383266}dialog p,dialog li{color:#526a5d}
+footer{color:#718078}
+.topbar{position:static;min-height:48px;padding:10px 20px;justify-content:flex-end}
+.topbar .brand,.topbar .tag{display:none}
+main{max-width:1400px;padding:20px 20px 0;margin:0 auto}
+.intro{margin-bottom:16px;align-items:center;gap:14px;flex-wrap:wrap}.intro h1{font-size:20px;letter-spacing:0;font-weight:600;margin:2px 0 0}.intro .eyebrow{font-size:11px;letter-spacing:1px}.intro .steps{margin:0 auto 0 0;gap:12px;font-size:12px}.intro .header-right{margin-left:auto;gap:8px}.intro .header-right button{font-size:12px;padding:7px 10px}
+.workbench{grid-template-columns:minmax(0,1.08fr) minmax(300px,1fr);gap:16px}
+#scene{height:480px}.panel-top{padding:12px}.views{gap:3px}.views button{padding:6px;font-size:12px}
+.eyepiece-wrap{padding:16px}#eyepiece{width:240px;max-width:100%}.readout{padding:12px 20px}.readout output{font-size:38px}
+.measure-controls{padding:12px 20px}.adjustments{padding:10px 20px}.scene-bottom{flex-wrap:wrap;font-size:12px}
+footer{flex-wrap:wrap;gap:8px;font-size:11px;padding:20px 0}
+@media(max-width:800px){.workbench{grid-template-columns:1fr}.records-layout{grid-template-columns:1fr}#scene{height:390px}.intro{flex-wrap:wrap}.steps{flex-wrap:wrap}main{padding:16px 12px 0}.record-toolbar{flex-wrap:wrap}.secondary{grid-template-columns:1fr}}
+@media(max-width:440px){#scene{height:320px}.intro h1{font-size:22px}.views button{font-size:11px;padding:5px}.record-toolbar label{width:100%}.panel-top{gap:7px}.readout output{font-size:34px}}
+@media(max-width:760px){.intro{display:flex}.intro h1{font-size:19px}.intro .steps{order:3;width:100%;margin:0}.intro .header-right{gap:5px}.intro .header-right button{padding:7px;font-size:12px}}

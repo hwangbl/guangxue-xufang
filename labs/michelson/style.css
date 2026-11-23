@@ -1,0 +1,50 @@
+*{box-sizing:border-box}body{margin:0;background:#f6f8f7;color:#253d34;font:14px/1.65 system-ui,'Microsoft YaHei',sans-serif}header,nav,main{max-width:1450px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;padding:24px 28px 12px}h1{font-size:26px;margin:3px 0}h2{font-size:20px;margin:2px 0}small,.caption{color:#6d8177;font-size:12px}button,input,select{font:inherit}button{background:white;color:#285f4e;border:1px solid #cfddd5;border-radius:6px;padding:8px 12px;cursor:pointer;min-height:40px}button:hover{background:#eaf3ee}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,input:focus-visible{outline:2px solid #387d62;outline-offset:2px}nav{display:flex;gap:12px;padding:10px 28px 22px;flex-wrap:wrap}nav span{padding:5px 12px;background:#eaf0ec;border-radius:5px;color:#6e8177}nav span.active{background:#285f4e;color:#fff}main{padding:0 28px 30px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:20px}section,aside,details{border:1px solid #dce6df;border-radius:10px;background:white;overflow:hidden}.bar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid #e8eee9;gap:10px}.instrument{align-self:start}#scene{height:560px;position:relative;background:#e5e9e6}#scene canvas{width:100%;height:100%;display:block}#loading{position:absolute;inset:0;display:grid;place-content:center;background:#e5e9e6;z-index:1;text-align:center}.caption,#selected{padding:0 16px}aside{padding-bottom:16px}aside>label,aside>button,aside>small,aside>p{display:block;margin:10px 16px}#eye{display:block;width:min(100%,320px);height:auto;aspect-ratio:1;margin:0 auto;background:#070a08}label input[type=range]{display:block;width:100%;accent-color:#2c7154}input[type=checkbox]{accent-color:#2c7154}input[type=number]{width:110px;border:1px solid #cbd8d0;border-radius:5px;padding:7px}.reading{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#eef4f0}.reading output{font:28px ui-monospace,monospace;color:#215d43}.buttons{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 16px}.records,details{grid-column:1/-1}.record-controls{display:flex;gap:15px;align-items:center;flex-wrap:wrap;padding:16px}.records>label,.records>p{margin:12px 16px;display:block}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:10px 16px;border-bottom:1px solid #e7eee9;white-space:nowrap}th{font-size:12px;color:#63796b}details{padding:15px 20px;color:#6b7d73}a{color:#286449}@media(max-width:1000px){main{grid-template-columns:1fr 320px;padding:0 14px 20px;gap:12px}#scene{height:470px}}@media(max-width:760px){main{grid-template-columns:1fr}#scene{height:380px}header,nav{padding-left:16px;padding-right:16px}h1{font-size:23px}.records,details{grid-column:auto}}
+
+/* Shared visual conventions with the Newton-ring laboratory. */
+:root { color-scheme: light; --text: #203832; --muted: #62756c; --line: #dfe7e2; --accent: #285f4e; }
+body { background: #f7f9f8; color: var(--text); }
+header, nav, main, footer { max-width: 1400px; }
+header { gap: 16px; padding: 20px 20px 8px; flex-wrap: wrap; }
+h1 { font-size: 20px; font-weight: 600; }
+header small { font-size: 11px; letter-spacing: 1px; }
+.header-actions { display: flex; gap: 8px; }
+nav { padding: 8px 20px 16px; gap: 8px; font-size: 12px; }
+main { padding: 0 20px 24px; grid-template-columns: minmax(0,1.08fr) minmax(300px,1fr); gap: 16px; }
+section, aside, details { border-color: var(--line); }
+.bar { flex-wrap: wrap; padding: 12px; }
+.bar > div { display: flex; flex-wrap: wrap; gap: 4px; }
+.bar > div:has(h2) { display: block; }
+.instrument .bar button { padding: 6px; font-size: 12px; }
+button.active { background: #e5f0ea; border-color: #9dbbac; }
+button:focus-visible, select:focus-visible, summary:focus-visible, #scene:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+#scene { height: 480px; }
+#eye { width: 240px; max-width: 100%; margin: 16px auto; border-radius: 50%; }
+.reading { padding: 12px 20px; }
+.reading output { font-size: 38px; font-variant-numeric: tabular-nums; }
+.readout-note, .table-note { font-size: 12px; color: var(--muted); }
+.part-hint { margin: 12px 16px; padding: 12px; background: #edf3ef; border-left: 3px solid #8eafa0; border-radius: 4px; }
+#selected { padding: 0; margin: 4px 0 0; min-height: 44px; }
+.part-guide { margin: 12px 16px; padding: 10px 12px; font-size: 12px; }
+summary { cursor: pointer; color: var(--accent); }
+dt { font-weight: 600; margin-top: 12px; color: var(--text); }
+dd { margin: 4px 0; }
+#state, #motion-state, #validation { padding: 8px 12px; border-radius: 4px; background: #edf3ef; }
+#state.warn, #validation.warn { color: #87581c; background: #fff6e7; }
+.measurement-summary { display: flex; flex-wrap: wrap; gap: 12px 24px; padding: 12px 16px; background: #f0f5f2; }
+.measurement-summary output { font-variant-numeric: tabular-nums; font-weight: 600; }
+.formula { margin-left: auto; color: var(--muted); }
+#start, #finish { background: var(--accent); color: white; }
+#start:hover, #finish:hover { background: #184c3c; }
+th { background: #f0f5f2; }
+.result-card { padding: 16px; background: linear-gradient(145deg,#fff,#edf5f0); }
+#mean { margin: 6px 0; font-size: 22px; font-weight: 600; color: var(--accent); }
+#yaw-reading, #pitch-reading { float: right; font-variant-numeric: tabular-nums; }
+footer { padding: 0 20px 24px; margin: auto; font-size: 11px; color: var(--muted); }
+dialog { width: min(560px,calc(100% - 32px)); max-height: 85vh; overflow: auto; border: 1px solid #bdcfc3; border-radius: 10px; padding: 24px; color: var(--text); }
+dialog::backdrop { background: #20383266; }
+dialog li { margin: 12px 0; }
+#help-close { float: right; }
+@media(max-width:800px) { main { grid-template-columns: 1fr; padding: 0 12px 20px; } #scene { height: 390px; } .formula { margin-left: 0; } }
+@media(max-width:440px) { #scene { height: 320px; } header { padding: 16px 12px 8px; } h1 { font-size: 19px; } .reading output { font-size: 34px; } .record-controls { gap: 10px; } }
+
+.review-warning { color: #87581c; background: #fff6e7; font-size: 12px; }
